@@ -64,7 +64,7 @@ export default function PaymentPlans() {
             </div>
             <h2 className="text-2xl font-heading font-bold mb-4">CareCredit</h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">Try the CareCredit payment calculator to find out what your estimated monthly payments could be.</p>
-            <Button asChild size="lg" className="bg-primary hover:bg-teal-dark text-primary-foreground rounded-full px-8 h-14">
+            <Button asChild size="lg" className="bg-primary hover:bg-navy/90 text-primary-foreground rounded-full px-8 h-14">
               <a href="https://www.carecredit.com/payment_calculator/" target="_blank" rel="noopener noreferrer">Calculate My Payment</a>
             </Button>
           </div>

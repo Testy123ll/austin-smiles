@@ -64,7 +64,7 @@ export default function PageLayout({ children, title, subtitle, showCTA = true, 
             <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">Ready to Get Started?</h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Schedule your appointment today and take the first step toward a healthier, more confident smile.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-primary hover:bg-teal-dark text-primary-foreground rounded-full px-8 h-14 text-base">
+              <Button asChild size="lg" className="bg-primary hover:bg-navy/90 text-primary-foreground rounded-full px-8 h-14 text-base">
                 <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">
                   <CalendarDays className="w-5 h-5 mr-2" /> Schedule Online
                 </a>

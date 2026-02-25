@@ -23,6 +23,9 @@ const DigitalWellnessScan = lazy(() => import("./pages/DigitalWellnessScan"));
 const ForPatients = lazy(() => import("./pages/ForPatients"));
 const AboutUs = lazy(() => import("./pages/AboutUs"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+const SmileGallery = lazy(() => import("./pages/SmileGallery"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
 
 const queryClient = new QueryClient();
 
@@ -58,6 +61,9 @@ const App = () => (
             <Route path="/for-patients" element={<ForPatients />} />
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/smile-gallery" element={<SmileGallery />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

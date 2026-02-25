@@ -47,7 +47,7 @@ export default function NewPatientSpecial() {
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-gold/10 rounded-2xl p-8 md:p-12 mb-16 text-center border border-gold/20">
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-4">Complimentary Teeth Whitening For Life</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">Schedule now to get complimentary whitening for life after completing a new patient appointment including exam, x-rays and a healthy mouth cleaning with us!</p>
-          <Button asChild size="lg" className="bg-primary hover:bg-teal-dark text-primary-foreground rounded-full px-8 h-14">
+          <Button asChild size="lg" className="bg-primary hover:bg-navy/90 text-primary-foreground rounded-full px-8 h-14">
             <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">Book Now</a>
           </Button>
         </motion.div>

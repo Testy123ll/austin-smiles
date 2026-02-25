@@ -84,7 +84,7 @@ export default function Navbar() {
             <Phone className="w-4 h-4" />
             (512) 866-3800
           </a>
-          <Button asChild className="bg-primary hover:bg-teal-dark text-primary-foreground rounded-full px-6">
+          <Button asChild className="bg-primary hover:bg-navy/90 text-primary-foreground rounded-full px-6">
             <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">Schedule Online</a>
           </Button>
         </div>
@@ -121,7 +121,7 @@ export default function Navbar() {
             <a href="tel:5128663800" className="flex items-center gap-2 text-sm font-medium text-primary">
               <Phone className="w-4 h-4" /> (512) 866-3800
             </a>
-            <Button asChild className="w-full bg-primary hover:bg-teal-dark rounded-full">
+            <Button asChild className="w-full bg-primary hover:bg-navy/90 rounded-full">
               <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">Schedule Online</a>
             </Button>
           </div>

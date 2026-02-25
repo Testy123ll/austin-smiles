@@ -55,7 +55,7 @@ export default function ReviewsSection() {
             href="https://www.google.com/search?q=austin+elite+smiles#lrd=0x8644d2b720c0d73d:0x4f11d603cf5ecfb9,1,,,,"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-teal-dark underline underline-offset-4 font-medium"
+            className="text-primary hover:text-navy/70 underline underline-offset-4 font-medium"
           >
             View More Reviews on Google →
           </a>

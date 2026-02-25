@@ -1,78 +1,176 @@
 import PageLayout from "@/components/PageLayout";
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Award, Smile, ShieldCheck, HeartPulse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const SCHEDULE_URL = "https://mychart.myoryx.com/online-schedule/index.html?realm=aes&univers=com";
 
 const packageIncludes = [
-  "4 sets of Viviera Retainers",
-  "Refinements",
-  "Whitening gels to use in trays to whiten while you straighten",
+  "4 sets of Vivera® Retainers",
+  "Unlimited Refinements",
+  "Premium whitening gels to use in trays to whiten while you straighten",
+];
+
+const benefits = [
+  {
+    icon: Smile,
+    title: "Virtually Invisible",
+    description: "Clear plastic trays that seamlessly blend with your natural smile, allowing you to undergo treatment discreetly."
+  },
+  {
+    icon: Award,
+    title: "Unmatched Comfort",
+    description: "Custom-crafted from smooth, BPA-free thermoplastic. No sharp metal brackets or poking wires."
+  },
+  {
+    icon: ShieldCheck,
+    title: "Removable Convenience",
+    description: "Easily remove your aligners to enjoy your favorite foods, brush, and floss without any restrictions."
+  },
+  {
+    icon: HeartPulse,
+    title: "Holistic Health",
+    description: "Straighter teeth are easier to clean, significantly reducing the risk of gum disease and tooth decay."
+  }
 ];
 
 export default function Invisalign() {
   return (
     <PageLayout
-      title="Invisalign® at Austin Elite Smiles"
-      subtitle="Achieving a straighter, healthier smile no longer means enduring bulky metal braces. With Invisalign®, you can attain the smile you've always desired without anyone even noticing."
+      title="Invisalign® Clear Aligners"
+      subtitle="Achieving a beautifully straight, healthy smile no longer means enduring bulky metal braces. Seamlessly align your teeth with the ultimate discreet aesthetic treatment."
       breadcrumbs={[{ label: "Services", href: "/our-services" }, { label: "Invisalign®", href: "/invisalign" }]}
     >
-      <div className="container max-w-4xl">
-        {/* Gold Plus Provider */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-gold/10 rounded-2xl p-8 text-center mb-16 border border-gold/20">
-          <h3 className="font-heading font-bold text-xl text-foreground mb-2">Gold Plus Provider</h3>
-          <p className="text-muted-foreground">We are proud to be a Gold Plus Provider with Invisalign, placing Austin Elite Smiles among the top practices in the industry.</p>
-        </motion.div>
+      <div className="container max-w-6xl">
+        
+        {/* Main Feature Section */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }} 
+            whileInView={{ opacity: 1, x: 0 }} 
+            viewport={{ once: true }} 
+            className="order-2 lg:order-1"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="h-px bg-gold w-8" />
+              <span className="text-gold uppercase tracking-widest text-sm font-medium">Gold Plus Provider</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-heading font-semibold text-navy leading-tight mb-6">
+              The Clear Choice for <br/><span className="italic font-light">Discreet Alignment</span>
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
+              Are you fed up with feeling self-conscious about your smile but seeking a more refined option than traditional metal braces? Invisalign® gently and accurately guides your teeth into perfect alignment using a series of custom, durable plastic trays.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-lg">
+              As a proud Gold Plus Provider, Austin Elite Smiles ranks among the top practices in the industry. We use advanced 3D scanning technology to map your entire treatment journey before you even wear your first tray.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }} 
+            whileInView={{ opacity: 1, scale: 1 }} 
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }} 
+            className="order-1 lg:order-2 relative"
+          >
+            <div className="aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-border/50 bg-cream">
+              {/* Fallback image if real one isn't available, using a placeholder for Invisalign */}
+              <img src="/images/technology.jpg" alt="Invisalign Clear Aligners" className="w-full h-full object-cover mix-blend-multiply" />
+            </div>
+            {/* Decorative Element */}
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gold/10 rounded-full blur-[40px] z-[-1]" />
+          </motion.div>
+        </div>
 
-        {/* Why Invisalign */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">Why Invisalign®?</h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">Are you fed up with feeling self-conscious about your smile? Seeking a more discreet option for straightening your teeth? Invisalign® aligners consist of durable plastic trays that gently guide your teeth into alignment. They're virtually invisible, comfortable, and removable, enabling you to eat and brush your teeth without any hassle.</p>
-          <div className="bg-muted/50 rounded-xl p-6 border border-border/50">
-            <p className="text-sm font-medium text-primary">DID YOU KNOW...</p>
-            <p className="text-foreground/80">Invisalign® aligners are made from a thermoplastic material that's BPA-free.</p>
+        {/* Benefits Grid */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          className="mb-24"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-heading font-semibold text-navy">The Premium Invisalign® Experience</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, i) => (
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card border border-border/50 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 bg-navy/5 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors">
+                  <benefit.icon className="w-6 h-6 text-navy group-hover:text-gold transition-colors" />
+                </div>
+                <h3 className="text-xl font-heading font-medium text-foreground mb-3">{benefit.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{benefit.description}</p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
-        {/* Health Benefits */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">Health Benefits of Invisalign®</h2>
-          <p className="text-muted-foreground leading-relaxed">Beyond achieving a straighter smile, Invisalign® reduces the risk of gum disease, tooth decay, and jaw problems. Improved dental alignment promotes better oral hygiene practices, as straighter teeth are easier to clean and maintain. You're not just enhancing your smile; you're investing in your long-term oral health.</p>
+        {/* Special Package Module */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          className="bg-navy text-white rounded-3xl p-10 md:p-16 text-center shadow-xl relative overflow-hidden mb-24"
+        >
+          {/* Subtle Background Pattern */}
+          <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://transparenttextures.com/patterns/stardust.png')]" />
+          
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Exclusive Invisalign® Package</h2>
+            <p className="text-cream/80 text-lg mb-8 font-light">
+              Discover the smile you've always dreamed of. For a limited time, enjoy exclusive savings on your comprehensive Invisalign® treatment.
+            </p>
+            
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-10 text-left w-full md:w-3/4 mx-auto backdrop-blur-sm">
+              <h3 className="font-heading font-semibold text-gold mb-6 text-xl border-b border-white/10 pb-4">Our Comprehensive Package Includes:</h3>
+              <ul className="space-y-4">
+                {packageIncludes.map((p, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <CheckCircle className="w-6 h-6 text-gold flex-shrink-0" />
+                    <span className="text-white/90 text-lg">{p}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-gold hover:bg-white text-navy rounded-full px-8 h-14 text-base transition-colors">
+                <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">
+                  Book Your Complimentary Consultation
+                </a>
+              </Button>
+            </div>
+          </div>
         </motion.div>
 
-        {/* First Visit */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">Your First Visit</h2>
-          <p className="text-muted-foreground leading-relaxed">Before beginning your Invisalign® journey, it's essential to undergo a thorough dental examination. We'll take scans of your teeth to generate precise digital 3D models of your mouth. Invisalign® labs use these models to map out your tooth movement and fabricate your custom alignment trays.</p>
-        </motion.div>
-
-        {/* Special Offers */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-primary/5 rounded-2xl p-8 md:p-12 mb-16 border border-primary/10">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">Special Invisalign® Offers</h2>
-          <p className="text-muted-foreground mb-6">Discover the smile you've always dreamed of with a complimentary consultation. For a limited time, enjoy exclusive savings on your Invisalign® treatment.</p>
-          <h3 className="font-heading font-semibold mb-4">Our Comprehensive Package Includes:</h3>
-          <ul className="space-y-3 mb-6">
-            {packageIncludes.map((p) => (
-              <li key={p} className="flex items-start gap-3">
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">{p}</span>
-              </li>
-            ))}
-          </ul>
-          <Button asChild size="lg" className="bg-primary hover:bg-teal-dark text-primary-foreground rounded-full px-8 h-14">
-            <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">Book Now</a>
+        {/* SmileView Tech */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          viewport={{ once: true }} 
+          className="text-center max-w-2xl mx-auto"
+        >
+          <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Smile className="w-8 h-8 text-primary" />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-heading font-bold text-navy mb-4">Preview Your Future Smile</h2>
+          <p className="text-muted-foreground mb-8 text-lg">
+            Curious about the results? Take a smiling selfie and use the Invisalign® SmileView™ Technology to see what your new smile could look like instantly.
+          </p>
+          <Button asChild variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-10 h-14 text-base">
+            <a href="https://providerbio.invisalign.com/sv/c19458995#start" target="_blank" rel="noopener noreferrer">
+              Try SmileView™ Now
+            </a>
           </Button>
         </motion.div>
 
-        {/* SmileView */}
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-4">Try the Invisalign® SmileView Technology</h2>
-          <p className="text-muted-foreground mb-6">Take a smiling selfie and see what Invisalign® can do for you.</p>
-          <Button asChild variant="outline" size="lg" className="rounded-full px-8 h-14">
-            <a href="https://providerbio.invisalign.com/sv/c19458995#start" target="_blank" rel="noopener noreferrer">Try It Now</a>
-          </Button>
-        </motion.div>
       </div>
     </PageLayout>
   );

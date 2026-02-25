@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Gift, DollarSign, Shield, Percent, Sparkles, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const offers = [
@@ -53,10 +54,10 @@ export default function OffersSection() {
 
         <div className="text-center">
           <p className="text-muted-foreground mb-4">Our team is happy to review insurance benefits, payment options, and next steps before treatment begins.</p>
-          <Button asChild size="lg" className="bg-primary hover:bg-teal-dark text-primary-foreground rounded-full px-10 h-14 text-base">
-            <a href="https://www.austinelitesmiles.com/contact-us" target="_blank" rel="noopener noreferrer">
+          <Button asChild size="lg" className="bg-primary hover:bg-navy/90 text-primary-foreground rounded-full px-10 h-14 text-base">
+            <Link to="/contact-us">
               Schedule Your Visit Today
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

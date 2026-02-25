@@ -1,4 +1,5 @@
 import { Facebook, Instagram, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -51,8 +52,8 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
           <p>© {new Date().getFullYear()} Austin Elite Smiles™. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <a href="https://www.austinelitesmiles.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Privacy Policy</a>
-            <a href="https://www.austinelitesmiles.com/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-white/70 transition-colors">Terms & Conditions</a>
+            <Link to="/privacy-policy" className="hover:text-white/70 transition-colors">Privacy Policy</Link>
+            <Link to="/terms-and-conditions" className="hover:text-white/70 transition-colors">Terms & Conditions</Link>
           </div>
         </div>
       </div>

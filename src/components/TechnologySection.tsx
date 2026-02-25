@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Sparkles, Sofa, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const features = [
@@ -41,9 +42,9 @@ export default function TechnologySection() {
             </div>
 
             <Button asChild variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8">
-              <a href="https://www.austinelitesmiles.com/3D-digital-wellness-scan" target="_blank" rel="noopener noreferrer">
+              <Link to="/3d-digital-wellness-scan">
                 Learn More
-              </a>
+              </Link>
             </Button>
           </motion.div>
 

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const cases = [
   { before: "/images/before-1.png", after: "/images/after-1.png" },
@@ -73,14 +74,12 @@ export default function GallerySection() {
         </div>
 
         <div className="text-center mt-10">
-          <a
-            href="https://www.austinelitesmiles.com/smile-gallery"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:text-teal-dark underline underline-offset-4 font-medium"
+          <Link
+            to="/smile-gallery"
+            className="text-primary hover:text-navy/70 underline underline-offset-4 font-medium"
           >
             See Our Full Smile Gallery →
-          </a>
+          </Link>
         </div>
       </div>
     </section>

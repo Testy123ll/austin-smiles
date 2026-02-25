@@ -49,7 +49,7 @@ export default function FocusSection() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-16 h-16 mx-auto rounded-2xl bg-teal-light flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
+                <div className="w-16 h-16 mx-auto rounded-2xl bg-gold/10 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
                   <Icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
                 </div>
                 <h3 className="text-lg font-heading font-semibold text-foreground mb-3">{item.title}</h3>
