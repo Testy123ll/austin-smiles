@@ -12,7 +12,7 @@ const reviews = [
 
 export default function ReviewsSection() {
   return (
-    <section id="reviews" className="py-24 bg-navy text-white">
+    <section id="reviews" className="py-16 md:py-24 bg-navy text-white">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

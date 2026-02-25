@@ -11,9 +11,9 @@ const features = [
 
 export default function TechnologySection() {
   return (
-    <section className="py-24 bg-cream">
+    <section className="py-16 md:py-24 bg-cream">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}

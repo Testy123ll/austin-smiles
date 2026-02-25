@@ -36,11 +36,11 @@ const logos = [
 
 export default function DoctorsSection() {
   return (
-    <section id="doctors" className="py-24 bg-cream overflow-hidden">
+    <section id="doctors" className="py-16 md:py-24 bg-cream overflow-hidden">
       <div className="container max-w-7xl">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

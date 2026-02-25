@@ -13,7 +13,7 @@ const highlights = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-cream">
+    <section id="about" className="py-16 md:py-24 bg-cream">
       <div className="container">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <motion.div

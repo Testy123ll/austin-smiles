@@ -18,7 +18,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="container relative z-10 py-20">
+      <div className="container relative z-10 py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

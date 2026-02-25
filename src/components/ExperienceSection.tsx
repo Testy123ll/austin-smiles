@@ -26,9 +26,9 @@ export default function ExperienceSection() {
   ];
 
   return (
-    <section className="py-24 bg-cream">
+    <section className="py-16 md:py-24 bg-cream">
       <div className="container max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Image Side */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
@@ -44,7 +44,7 @@ export default function ExperienceSection() {
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 lg:-right-12 bg-white p-8 shadow-xl max-w-[280px] rounded-bl-3xl rounded-tr-3xl">
+            <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 lg:-right-12 bg-white p-6 md:p-8 shadow-xl max-w-[240px] md:max-w-[280px] rounded-bl-3xl rounded-tr-3xl">
               <p className="font-heading italic text-xl text-navy">
                 "Not just a dental visit, an escape."
               </p>
