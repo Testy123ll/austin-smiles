@@ -3,30 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Austin Elite Smiles | Premium Cosmetic & Family Dentistry</title>
+    <title>Austin Elite Smiles | Premium Cosmetic &amp; Family Dentistry</title>
     <meta
       name="description"
       content="Austin Elite Smiles offers luxury cosmetic dentistry, Invisalign®, smile makeovers, and advanced preventive care in a relaxing spa-like environment in Austin, TX."
     />
-    <meta name="keywords" content="Austin dentist, cosmetic dentistry Austin, Invisalign Austin, teeth whitening Austin, luxury dental clinic, smile makeover" />
+    <meta
+      name="keywords"
+      content="Austin dentist, cosmetic dentistry Austin, Invisalign Austin, teeth whitening Austin, luxury dental clinic, smile makeover"
+    />
     <meta name="author" content="Austin Elite Smiles" />
     <meta name="robots" content="index, follow" />
 
+    <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Austin Elite Smiles | Premium Cosmetic & Family Dentistry"
+      content="Austin Elite Smiles | Premium Cosmetic &amp; Family Dentistry"
     />
     <meta
       property="og:description"
       content="Women-owned dental practice offering luxury cosmetic dentistry, Invisalign®, smile makeovers, and preventive care in Austin, TX."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/logo-dark.png" />
+    <meta property="og:image" content="/images/logo.png" />
     <meta property="og:url" content="https://www.austinelitesmiles.com/" />
-    
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Austin Elite Smiles" />
-    <meta name="twitter:description" content="Experience spa-like dental care and premium cosmetic dentistry at Austin Elite Smiles in Austin, TX." />
+    <meta
+      name="twitter:description"
+      content="Experience spa-like dental care and premium cosmetic dentistry at Austin Elite Smiles in Austin, TX."
+    />
+
+    <!-- ── Performance: DNS prefetch + preconnect ─────────────── -->
+    <!-- Google Fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Unsplash images used in ServicesSection / ExperienceSection -->
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <!-- Pexels video used in HeroSection -->
+    <link rel="dns-prefetch" href="https://videos.pexels.com" />
+
+    <!-- ── Fonts: optimised load with font-display=swap ──────── -->
+    <!-- Use &display=swap to avoid render-blocking FOUT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ── Critical image preloads ────────────────────────────── -->
+    <!-- Logo is above-the-fold, preload it -->
+    <link rel="preload" as="image" href="/images/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/aes-icon.png" />
   </head>
 
   <body>

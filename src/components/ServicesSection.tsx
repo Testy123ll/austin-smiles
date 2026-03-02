@@ -83,7 +83,15 @@ export default function ServicesSection() {
               >
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0">
-                  <img src={service.image} alt={service.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <img
+                    src={service.image.replace('q=80', 'q=75&w=640')}
+                    alt={service.name}
+                    loading="lazy"
+                    decoding="async"
+                    width="640"
+                    height="480"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
                 </div>
                 

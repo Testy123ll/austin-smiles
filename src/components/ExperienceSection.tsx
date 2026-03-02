@@ -39,8 +39,12 @@ export default function ExperienceSection() {
           >
             <div className="aspect-[4/5] overflow-hidden rounded-t-full shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80" 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" 
                 alt="Spa-like dental experience" 
+                loading="lazy"
+                decoding="async"
+                width="800"
+                height="1000"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>

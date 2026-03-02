@@ -44,12 +44,12 @@ export default function GallerySection() {
               transition={{ delay: i * 0.15 }}
               className="relative overflow-hidden rounded-2xl aspect-[4/3] shadow-lg"
             >
-              <img src={c.after} alt="After treatment" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={c.after} alt="After treatment" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
               <div
                 className="absolute inset-0 overflow-hidden"
                 style={{ width: `${sliderPos[i]}%` }}
               >
-                <img src={c.before} alt="Before treatment" className="absolute inset-0 w-full h-full object-cover" style={{ minWidth: `${100 / (sliderPos[i] / 100)}%` }} />
+                <img src={c.before} alt="Before treatment" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" style={{ minWidth: `${100 / (sliderPos[i] / 100)}%` }} />
               </div>
               <div
                 className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg z-10"

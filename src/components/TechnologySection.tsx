@@ -56,7 +56,7 @@ export default function TechnologySection() {
             className="relative"
           >
             <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img src="/images/technology.jpg" alt="State-of-the-art dental technology" className="w-full h-auto" />
+              <img src="/images/technology.jpg" alt="State-of-the-art dental technology" loading="lazy" decoding="async" className="w-full h-auto" />
             </div>
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
             <div className="absolute -top-4 -right-4 w-32 h-32 bg-gold/10 rounded-full blur-2xl" />

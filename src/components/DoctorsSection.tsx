@@ -63,8 +63,8 @@ export default function DoctorsSection() {
             className="flex gap-6 opacity-60 grayscale"
           >
             {/* Displaying one or two key logos for authority next to header */}
-             <img src="/images/ada-logo.png" alt="ADA" className="h-10 w-auto object-contain" />
-             <img src="/images/aaca-logo.png" alt="AACA" className="h-10 w-auto object-contain" />
+             <img src="/images/ada-logo.png" alt="ADA" className="h-10 w-auto object-contain" loading="lazy" decoding="async" />
+             <img src="/images/aaca-logo.png" alt="AACA" className="h-10 w-auto object-contain" loading="lazy" decoding="async" />
           </motion.div>
         </div>
 
@@ -83,6 +83,8 @@ export default function DoctorsSection() {
                 <img
                   src={doc.image}
                   alt={doc.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover grayscale mix-blend-multiply transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105 group-hover:mix-blend-normal"
                 />
                 
@@ -119,6 +121,8 @@ export default function DoctorsSection() {
                 key={i} 
                 src={logo.src} 
                 alt={logo.alt} 
+                loading="lazy"
+                decoding="async"
                 className="h-10 md:h-12 w-auto object-contain grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300" 
               />
             ))}

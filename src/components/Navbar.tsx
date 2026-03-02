@@ -33,7 +33,11 @@ const navLinks = [
   { label: "Contact", href: "/contact-us" },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  onOpenModal?: () => void;
+}
+
+export default function Navbar({ onOpenModal }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [dropdown, setDropdown] = useState<string | null>(null);
 
@@ -41,7 +45,15 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container flex items-center justify-between h-20">
         <Link to="/" className="flex-shrink-0">
-          <img src="/images/logo.png" alt="Austin Elite Smiles" className="h-14 w-auto" />
+          <img
+            src="/images/logo.png"
+            alt="Austin Elite Smiles"
+            className="h-14 w-auto"
+            fetchPriority="high"
+            decoding="async"
+            width="180"
+            height="56"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
@@ -84,8 +96,12 @@ export default function Navbar() {
             <Phone className="w-4 h-4" />
             (512) 866-3800
           </a>
-          <Button asChild className="bg-primary hover:bg-navy/90 text-primary-foreground rounded-full px-6">
-            <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">Schedule Online</a>
+          <Button
+            id="navbar-schedule-btn"
+            onClick={onOpenModal}
+            className="bg-primary hover:bg-navy/90 text-primary-foreground rounded-full px-6"
+          >
+            Schedule Online
           </Button>
         </div>
 
@@ -121,8 +137,12 @@ export default function Navbar() {
             <a href="tel:5128663800" className="flex items-center gap-2 text-sm font-medium text-primary">
               <Phone className="w-4 h-4" /> (512) 866-3800
             </a>
-            <Button asChild className="w-full bg-primary hover:bg-navy/90 rounded-full">
-              <a href={SCHEDULE_URL} target="_blank" rel="noopener noreferrer">Schedule Online</a>
+            <Button
+              id="navbar-mobile-schedule-btn"
+              onClick={() => { onOpenModal?.(); setOpen(false); }}
+              className="w-full bg-primary hover:bg-navy/90 rounded-full"
+            >
+              Schedule Online
             </Button>
           </div>
         </div>
